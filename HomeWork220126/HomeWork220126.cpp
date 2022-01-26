@@ -11,7 +11,7 @@ public:
     {
 
     }
-    MyInt operator ++()
+    MyInt& operator ++()
     {
         Value += 1;
         return *this;
