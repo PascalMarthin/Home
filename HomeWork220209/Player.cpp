@@ -57,5 +57,14 @@ void Player::Update()
 
 void Player::Render() 
 {
+	if (Pos_.x_ < 0)
+	{
+		Pos_.x_ = 0;
+	}
+	if (Pos_.y_ < 0)
+	{
+		Pos_.y_ = 0;
+	}
+
 	Screen_->SetPixel(Pos_, Text_);
 }

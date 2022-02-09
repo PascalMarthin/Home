@@ -80,15 +80,24 @@ void TextScreen::PrintScreen()
 }
 
 
-void TextScreen::SetPixel(ConsoleVector _Pos, const char* _DefaultValue) 
+void TextScreen::SetPixel(ConsoleVector& _Pos, const char* _DefaultValue) 
 {
 	SetPixel(_Pos.x_, _Pos.y_, _DefaultValue);
 }
 
-void TextScreen::SetPixel(int _X, int _Y, const char* _DefaultValue) 
+void TextScreen::SetPixel(int& _X, int& _Y, const char* _DefaultValue) 
 {
-	// 기본자료형을 사용한 함수에 진짜 내용을 놓고
+	if (Size_.x_ <= _X)
+	{
+		_X = Size_.x_ - 1;
+	}
 
+	if (Size_.y_ <= _Y)
+	{
+		_Y = Size_.y_ - 1;
+	}
+
+	// 기본자료형을 사용한 함수에 진짜 내용을 놓고
 	for (int i = 0; i < 2; i++)
 	{
 		PixelData_[_Y][(_X * 2) + i] = _DefaultValue[i];

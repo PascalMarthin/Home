@@ -33,8 +33,8 @@ public:
 	void PrintScreen();
 
 	// X Y위치에 글자를 출력한다.
-	void SetPixel(ConsoleVector _Pos, const char* _DefaultValue);
-	void SetPixel(int _X, int _Y, const char* _DefaultValue);
+	void SetPixel(ConsoleVector& _Pos, const char* _DefaultValue);
+	void SetPixel(int& _X, int& _Y, const char* _DefaultValue);
 
 	
 

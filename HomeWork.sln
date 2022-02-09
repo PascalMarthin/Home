@@ -4,9 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HomeWork", "HomeWork", "{7F8315C9-E27A-4E48-8892-6012EA8EC7B9}"
-	ProjectSection(SolutionItems) = preProject
-		HomeWork220207.png = HomeWork220207.png
-	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HomeWork220114CharChange", "HomeWork220114CharChange\HomeWork220114CharChange.vcxproj", "{E2006A78-673F-4337-A86F-1536CE474DE3}"
 EndProject
@@ -21,6 +18,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HomeWork220114ToUpper", "HomeWork220114ToUpper\HomeWork220114ToUpper.vcxproj", "{EA508F11-D824-467A-8546-53AA8C5F0155}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HomeWork220126", "HomeWork220126\HomeWork220126.vcxproj", "{5B7C8D66-8B9D-4267-A5F5-65FCDA684BBB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HomeWork220209", "ConsoleScreen\ConsoleScreen.vcxproj", "{958B682C-8D66-4E32-903C-B9F8A3014EFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -86,6 +85,14 @@ Global
 		{5B7C8D66-8B9D-4267-A5F5-65FCDA684BBB}.Release|x64.Build.0 = Release|x64
 		{5B7C8D66-8B9D-4267-A5F5-65FCDA684BBB}.Release|x86.ActiveCfg = Release|Win32
 		{5B7C8D66-8B9D-4267-A5F5-65FCDA684BBB}.Release|x86.Build.0 = Release|Win32
+		{958B682C-8D66-4E32-903C-B9F8A3014EFB}.Debug|x64.ActiveCfg = Debug|x64
+		{958B682C-8D66-4E32-903C-B9F8A3014EFB}.Debug|x64.Build.0 = Debug|x64
+		{958B682C-8D66-4E32-903C-B9F8A3014EFB}.Debug|x86.ActiveCfg = Debug|Win32
+		{958B682C-8D66-4E32-903C-B9F8A3014EFB}.Debug|x86.Build.0 = Debug|Win32
+		{958B682C-8D66-4E32-903C-B9F8A3014EFB}.Release|x64.ActiveCfg = Release|x64
+		{958B682C-8D66-4E32-903C-B9F8A3014EFB}.Release|x64.Build.0 = Release|x64
+		{958B682C-8D66-4E32-903C-B9F8A3014EFB}.Release|x86.ActiveCfg = Release|Win32
+		{958B682C-8D66-4E32-903C-B9F8A3014EFB}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -98,6 +105,7 @@ Global
 		{BCEB5DB3-9389-4780-B830-8CC562053DC2} = {7F8315C9-E27A-4E48-8892-6012EA8EC7B9}
 		{EA508F11-D824-467A-8546-53AA8C5F0155} = {7F8315C9-E27A-4E48-8892-6012EA8EC7B9}
 		{5B7C8D66-8B9D-4267-A5F5-65FCDA684BBB} = {7F8315C9-E27A-4E48-8892-6012EA8EC7B9}
+		{958B682C-8D66-4E32-903C-B9F8A3014EFB} = {7F8315C9-E27A-4E48-8892-6012EA8EC7B9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0B384C1A-6B2A-4D70-91B0-37125760C47B}
