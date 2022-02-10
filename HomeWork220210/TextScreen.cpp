@@ -1,17 +1,18 @@
 #include "TextScreen.h"
 #include <iostream>
+#include <assert.h>
 
 TextScreen::TextScreen(int _Width, int _Height, const char* _DefaultValue)
 	: PixelData_(nullptr)
-	, Size_(_Width, _Height)
+	, Size_(0, 0)
 	, DefaultPixel_() // 사실 해줄필요가 없다.
 {
-	CreateScreen(/*_Width, _Height,*/ _DefaultValue);
+	CreateScreen(_Width, _Height, _DefaultValue);
 }
 
 TextScreen::~TextScreen() 
 {
-	for (int i = 0; i < Size_.y_; i++)
+	for (int i = 0; i < Size_.y_ ; i++)
 	{
 		if (nullptr != PixelData_)
 		{
@@ -27,10 +28,10 @@ TextScreen::~TextScreen()
 	}
 }
 
-void TextScreen::CreateScreen(/*int _Width, int _Height,*/ const char* _DefaultValue)
+void TextScreen::CreateScreen(int _Width, int _Height, const char* _DefaultValue)
 {
-	//Size_.x_ = _Width;
-	//Size_.y_ = _Height;
+	Size_.x_ = _Width;
+	Size_.y_ = _Height;
 
 	for (int i = 0; i < 3; i++)
 	{
@@ -80,24 +81,20 @@ void TextScreen::PrintScreen()
 }
 
 
-void TextScreen::SetPixel(ConsoleVector& _Pos, const char* _DefaultValue) 
+// 대부분의 상황에서 이걸로 쓰겠지만
+void TextScreen::SetPixel(ConsoleVector _Pos, const char* _DefaultValue) 
 {
 	SetPixel(_Pos.x_, _Pos.y_, _DefaultValue);
 }
 
-void TextScreen::SetPixel(int& _X, int& _Y, const char* _DefaultValue) 
+// 원론함수가 없으면 세세한 조정한 조정을 못할때가 있기 때문에
+// 2가지 함수를 굳이 구현하게 됩니다.
+// 코드는 사용성이 좋아야 합니다.
+void TextScreen::SetPixel(int _X, int _Y, const char* _DefaultValue) 
 {
-	if (Size_.x_ <= _X)
-	{
-		_X = Size_.x_ - 1;
-	}
-
-	if (Size_.y_ <= _Y)
-	{
-		_Y = Size_.y_ - 1;
-	}
 
 	// 기본자료형을 사용한 함수에 진짜 내용을 놓고
+
 	for (int i = 0; i < 2; i++)
 	{
 		PixelData_[_Y][(_X * 2) + i] = _DefaultValue[i];

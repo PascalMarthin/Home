@@ -24,7 +24,7 @@ public:
 	}
 
 	// 화면의 글자를 동적으로 할당하여 메모리를 만들어내는 작업
-	void CreateScreen(/*int _Width, int _Height, */const char* _DefaultValue);
+	void CreateScreen(int _Width, int _Height, const char* _DefaultValue);
 
 	// DefaultPixel_의 문자열 앞쪽 2바이트로 화면을 전부 초기화 한다.
 	void SettingScreen();
@@ -33,10 +33,8 @@ public:
 	void PrintScreen();
 
 	// X Y위치에 글자를 출력한다.
-	void SetPixel(ConsoleVector& _Pos, const char* _DefaultValue);
-	void SetPixel(int& _X, int& _Y, const char* _DefaultValue);
-
-	
+	void SetPixel(ConsoleVector _Pos, const char* _DefaultValue);
+	void SetPixel(int _X, int _Y, const char* _DefaultValue);
 
 protected:
 
